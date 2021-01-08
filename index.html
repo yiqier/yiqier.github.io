@@ -15,3 +15,9 @@ document.write(Date())
 </script>
 
 
+
+<script language="javascript">
+var a = new Date()
+a = <%=System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")%>;
+Response.Write(a)
+</script>
