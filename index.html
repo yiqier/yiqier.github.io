@@ -23,19 +23,16 @@ post显示ajax跨域
 <p id="result"></p>
 <script>
 function ajax()
-{   var xhr;
+{    var xhr;
     xhr=new XMLHttpRequest();
     xhr.onreadystatechange=function()
-    {  if (xhr.readyState==4 && xhr.status==200)
-        {   document.getElementById('result').innerText = xhr.responseText;
-             var aaa = xhr.responseText;
-          //alert(aaa);  } };
-    xhr.open("GET","http://sanliuyi.tpddns.cn:71/tongji.php",true);
+    {        if (xhr.readyState==4 && xhr.status==200)
+        {            document.getElementById('result').innerText = xhr.responseText;
+          var aaa = xhr.responseText;
+          alert(aaa);        }    };
+    xhr.open("GET","http://sanliuyi.tpddns.cn:71",true);
     xhr.send();}
 ajax();
 </script>
-
-
-
 
 
