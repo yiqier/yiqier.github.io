@@ -1,25 +1,22 @@
 <meta charset "UTF-8">
-<style>html{font-size:100px;}</style>
+<style>html{font-size:50px;}</style>
 显示时间
 <script>document.write(Date())</script>
-
-
 <br/>
 post显示框架网页
-<iframe id="mainIframe" name="mainIframe" src="http://www.soso.com" frameborder="0" scrolling="auto" ></iframe>
+<br/>
+<iframe id="mainIframe" name="mainIframe" src="http://www.baidu.com" frameborder="0" scrolling="auto" ></iframe>
 <iframe id="mainIframe" name="mainIframe" src="http://sanliuyi.tpddns.cn:71" frameborder="0" scrolling="auto" ></iframe>
-
-
 <br/>
 post显示json
+<br/>
 <script src="http://sanliuyi.tpddns.cn:71/json.php"></script>
 <script type="text/javascript">
 document.write(returnCitySN["name"]+','+returnCitySN["pwd"])
 </script>
-
-
 <br/>
 post显示ajax跨域
+<br/>
 <p id="result"></p>
 <script>
 function ajax()
@@ -29,10 +26,21 @@ function ajax()
     {        if (xhr.readyState==4 && xhr.status==200)
         {            document.getElementById('result').innerText = xhr.responseText;
           var aaa = xhr.responseText;
-          alert(aaa);        }    };
-    xhr.open("GET","http://sanliuyi.tpddns.cn:71",true);
+          //alert(aaa);
+     }    };
+    xhr.open("GET","http://sanliuyi.tpddns.cn:71/tongji.php",true);
     xhr.send();}
 ajax();
 </script>
 
 
+*****************************
+asp.asp
+<%response.write("123123")%>
+
+
+ *****************************
+asp.net
+大小写不能错
+<%@ Page Language="c#" %>
+<%Response.Write("123123");%>
