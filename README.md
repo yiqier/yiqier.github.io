@@ -33,12 +33,6 @@
 情感教程，5t资料免费下载，在线观看
 资料一共5000g，永久更新
 
-
-
-永久网址：https://github.com/yiqier/yiqier.github.io
-
-永久网址：https://yiqier.github.io/
-
 qq号：2095769247
 
 qq群：461090612群1，1041599089群2，1041282775群3，1042666396群4
@@ -46,6 +40,10 @@ qq群：461090612群1，1041599089群2，1041282775群3，1042666396群4
 微信号：1209413901
 
 微信群：https://w.url.cn/s/AVUdh03
+
+永久网址：https://yiqier.github.io/
+
+永久网址：https://github.com/yiqier/yiqier.github.io
 
 
 
