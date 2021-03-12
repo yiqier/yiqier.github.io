@@ -28,16 +28,18 @@ document.write(test,'test23');
 
 <script>
 $.ajax({
-     type :  "post" ,
+     type :  "get" ,
      url :  "http://sanliuyi.iok.la:8080/tongjiajax.php" ,
      dataType :  "jsonp" ,
      jsonp:  "callback" , //传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
      jsonpCallback: "success_jsonpCallback" , //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
      success :  function (json){
          alert( 'success' );
+document.write('成功');
      },
      error: function (){
          alert( 'fail' );
+document.write('失败');
      }
 });
 </script>
