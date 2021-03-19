@@ -121,11 +121,10 @@ if(location.href.indexOf(".php")!= -1)
 <div class="divshuliediv1">
 <!--竖列1，文章1-->
     <div>
-    <br/>竖列<br/>
+    <br/>根据后缀选择
 <script>//判断文件类型返回主页
 if(location.href.indexOf(".html")!= -1)
 {
-
 name="http://www.baidu.com/";
 document.write(" <br\/><a href ="+name+" target=\"_blank\">"+name+"<\/a>");
 
@@ -137,11 +136,12 @@ document.write(" <br\/><a href = wenzhang\/"+name+" target=\"_blank\">"+name+"<\
 
 name="github图片版.md";
 document.write(" <br\/><a href = wenzhang\/"+name+" target=\"_blank\">"+name+"<\/a>");
-
-
 }
+ 
+
 if(location.href.indexOf(".php")!= -1)
 {
+let phpcode=`
 <?php
 $s="";
 $arr=array();
@@ -153,14 +153,12 @@ if(isset($_GET['id']))
 {$s=$_GET['id'];  chdir($s); }
 //echo "<a href=".basename(__FILE__).">返回主页文件名".basename(__FILE__)."</a><br/>";
 //echo '当前在'.getcwd(),'<br />';
-
 //这里判断包含几次自定义目录决定用不用根目录
 if( substr_count($s,$wenjianjia) ==0)
 {$a=opendir($wenjianjia);}
 else
 {$a=opendir("./");
 $wenjianjia="";}
-
 //循环开始，如果点等于空属于文件
 while($c=readdir($a)){
 if(strrpos($c, '.')==""  || $c==".."  || $c==".")
@@ -185,18 +183,17 @@ array_multisort($arr2);
 for($x=0;$x<count($arr2);$x++)
 {$ccc=$arr2[$x]['name'];
 if($arr2[$x]['id']!=".."  && $arr2[$x]['id']!=".")
-{ echo "<a href=".basename(__FILE__)."?id=$ccc>------".$arr2[$x]['id']."</a><br/>";  }
-
+{ echo "<br><a href=".basename(__FILE__)."?id=$ccc>------".$arr2[$x]['id']."</a>";  }
 }
-
 //排列输出文件
 array_multisort(array_column($arr,'name'),SORT_ASC,$arr);
 for($x=0;$x<count($arr);$x++)
 {$bbb=$arr[$x]['id'].'.'.$arr[$x]['name'];
-echo "<a href='$genmulu$Folder/$bbb'>".$bbb."</a><br />"; 
+echo "<br><a href='$genmulu$Folder/$bbb'>".$bbb."</a>"; 
 }
-
 ?>
+`;//js变量结束
+document.write(phpcode);
 }
 </script>
 
